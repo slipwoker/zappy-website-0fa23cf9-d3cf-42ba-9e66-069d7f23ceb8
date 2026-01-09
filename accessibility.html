@@ -1,13 +1,666 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="he" dir="rtl"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="הצהרת נגישות של loplarjjjj - מחויבות לנגישות דיגיטלית לכלל הציבור בהתאם לתקן ישראלי 5568 ו-WCAG 2.1 ברמת AA. מידע על תמיכה בטכנולוגיות מסייעות, עקרונות נגישות ודרכי יצירת קשר.">
     <meta name="robots" content="index, follow">
-    <title>הצהרת נגישות</title>
-    <meta name="description" content="הצהרת הנגישות שלנו - מחויבותנו לנגישות דיגיטלית">
-    <meta name="keywords" content="">
-    
+    <title>Accessibility</title>
+    <style>
+        :root {
+            --primary-color: #00CED1;
+            --bg-light: #F2F2F2;
+            --text-dark: #333333;
+            --text-medium: #4A4A4A;
+            --text-light: #777777;
+            --accent-light: #F0F8FF;
+            --white: #ffffff;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 8px 30px rgba(0, 206, 209, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Heebo', 'Arial', sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+
+        /* Skip to content link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 0 0 4px 4px;
+            z-index: 100;
+            font-weight: 600;
+        }
+
+        .skip-link:focus {
+            top: 0;
+            outline: 3px solid var(--text-dark);
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-link:hover {
+            transform: scale(1.05);
+        }
+
+        .logo {
+            height: 50px;
+            width: auto;
+            transition: all 0.3s ease;
+        }
+
+        .main-nav {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            display: block;
+            padding: 0.75rem 1.25rem;
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color);
+            background: var(--accent-light);
+            transform: translateY(-2px);
+        }
+
+        .nav-link:focus {
+            outline: 3px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+
+        .nav-link.active {
+            color: var(--primary-color);
+            background: var(--accent-light);
+            font-weight: 600;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: var(--text-dark);
+            cursor: pointer;
+            padding: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-toggle:hover {
+            color: var(--primary-color);
+        }
+
+        .mobile-menu-toggle:focus {
+            outline: 3px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #008B8B 100%);
+            color: var(--white);
+            padding: 100px 2rem 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" fill="rgba(255,255,255,0.05)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .accessibility-intro {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            margin-bottom: 3rem;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        .accessibility-intro h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .accessibility-intro h2::before {
+            content: '♿';
+            font-size: 2.5rem;
+        }
+
+        .accessibility-intro p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: var(--text-medium);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Standards Section */
+        .standards-section {
+            background: var(--accent-light);
+            padding: 3rem;
+            border-radius: 16px;
+            margin-bottom: 3rem;
+            border-right: 5px solid var(--primary-color);
+            animation: fadeInUp 0.8s ease 0.4s both;
+        }
+
+        .standards-section h3 {
+            font-size: 2rem;
+            color: var(--text-dark);
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .standards-section h3::before {
+            content: '✓';
+            background: var(--primary-color);
+            color: var(--white);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--primary-color);
+            animation: fadeInUp 0.8s ease both;
+        }
+
+        .feature-card:nth-child(1) { animation-delay: 0.1s; }
+        .feature-card:nth-child(2) { animation-delay: 0.2s; }
+        .feature-card:nth-child(3) { animation-delay: 0.3s; }
+        .feature-card:nth-child(4) { animation-delay: 0.4s; }
+        .feature-card:nth-child(5) { animation-delay: 0.5s; }
+        .feature-card:nth-child(6) { animation-delay: 0.6s; }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .feature-card::before {
+            content: '✦';
+            font-size: 2rem;
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            color: var(--text-medium);
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        /* Principles Section */
+        .principles-section {
+            margin: 4rem 0;
+        }
+
+        .principles-section h3 {
+            font-size: 2rem;
+            color: var(--text-dark);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .principle-card {
+            background: linear-gradient(135deg, var(--white) 0%, var(--accent-light) 100%);
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .principle-card:hover {
+            border-color: var(--primary-color);
+            transform: scale(1.05);
+        }
+
+        .principle-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .principle-card h4 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .principle-card p {
+            color: var(--text-medium);
+            line-height: 1.6;
+        }
+
+        /* Tools Section */
+        .tools-section {
+            background: var(--bg-light);
+            padding: 4rem 2rem;
+            margin: 4rem -2rem;
+            border-radius: 16px;
+        }
+
+        .tools-section h3 {
+            font-size: 2rem;
+            color: var(--text-dark);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .tools-list {
+            max-width: 800px;
+            margin: 0 auto;
+            display: grid;
+            gap: 1rem;
+        }
+
+        .tool-item {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .tool-item:hover {
+            transform: translateX(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .tool-item::before {
+            content: '▶';
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #008B8B 100%);
+            color: var(--white);
+            padding: 4rem 3rem;
+            border-radius: 16px;
+            margin: 4rem 0;
+            text-align: center;
+            box-shadow: var(--shadow-hover);
+        }
+
+        .contact-section h3 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-section p {
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-item-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item strong {
+            font-size: 1.125rem;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-item a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 1.125rem;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+        }
+
+        .contact-item a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+        }
+
+        /* Response Time */
+        .response-time {
+            background: var(--white);
+            color: var(--text-dark);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .response-time h4 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .response-time p {
+            color: var(--text-medium);
+            line-height: 1.8;
+        }
+
+        /* Complaints Section */
+        .complaints-section {
+            background: var(--accent-light);
+            padding: 2.5rem;
+            border-radius: 12px;
+            margin-top: 3rem;
+            border-right: 5px solid var(--primary-color);
+        }
+
+        .complaints-section h4 {
+            color: var(--text-dark);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .complaints-section p {
+            color: var(--text-medium);
+            line-height: 1.8;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 3rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-content p {
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .main-nav {
+                position: fixed;
+                top: 80px;
+                right: -100%;
+                width: 80%;
+                height: calc(100vh - 80px);
+                background: var(--white);
+                box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+                transition: right 0.3s ease;
+                z-index: 999;
+            }
+
+            .main-nav.active {
+                right: 0;
+            }
+
+            .nav-menu {
+                flex-direction: column;
+                padding: 2rem;
+                gap: 0;
+                align-items: stretch;
+            }
+
+            .nav-link {
+                padding: 1rem;
+                border-bottom: 1px solid var(--bg-light);
+            }
+
+            .hero-section {
+                padding: 60px 1.5rem 50px;
+            }
+
+            .hero-section h1 {
+                font-size: 2.25rem;
+            }
+
+            .hero-icon {
+                font-size: 3rem;
+            }
+
+            main {
+                padding: 2rem 1rem;
+            }
+
+            .accessibility-intro,
+            .standards-section {
+                padding: 2rem 1.5rem;
+            }
+
+            .accessibility-intro h2 {
+                font-size: 1.75rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .principles-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .tools-section {
+                margin: 2rem -1rem;
+                padding: 2rem 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-section h1 {
+                font-size: 1.875rem;
+            }
+
+            .accessibility-intro h2 {
+                font-size: 1.5rem;
+                flex-direction: column;
+            }
+
+            .feature-card,
+            .principle-card {
+                padding: 1.5rem;
+            }
+        }
+
+        /* High Contrast Mode Support */
+        @media (prefers-contrast: high) {
+            .nav-link:hover,
+            .nav-link.active {
+                outline: 2px solid currentColor;
+            }
+        }
+
+        /* Reduced Motion Support */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+
     <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
@@ -16,7 +669,59 @@
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png">
     <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-    <!-- Zappy Analytics -->
+<style>
+/* Zappy Attribution Header Styles */
+.zappy-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0px 4px 19px 0px rgba(0,0,0,0.04);
+  padding: 16px 10px;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  color: #4a4a4a;
+  line-height: 21px;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 21px;
+  direction: ltr !important;
+  unicode-bidi: isolate;
+}
+
+    .zappy-header p {
+      margin: 0;
+      padding: 0;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21px;
+      white-space: nowrap;
+      display: inline-block;
+      vertical-align: baseline;
+      margin-bottom: 0 !important;
+      direction: ltr !important;
+    }
+
+.zappy-header .zappy-link {
+  font-weight: 700;
+  color: #4a4a4a;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.zappy-header .zappy-link:hover {
+  opacity: 0.7;
+}</style>
+    <!-- Cookie Consent -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
+    <!-- Mickidum Accessibility Toolbar -->
+    <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
+<!-- Zappy Analytics -->
 <script>
 (function() {
   'use strict';
@@ -219,7 +924,7 @@
 </script>
 <!-- End Zappy Analytics -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/styles.css">
+
     <style id="zappy-dropdown-submenu-styles">
       /* ========== DESKTOP DROPDOWN SUBMENU STYLES ========== */
       /* Base styles for dropdown submenus - parent must be positioned */
@@ -260,118 +965,362 @@
       }
       @media (min-width: 769px) { .mobile-submenu-toggle { display: none !important; } }
     </style>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-<div class="legal-page-wrapper"><div class="legal-container">
-        <h1>הצהרת נגישות</h1>
-        
-        <div class="last-updated">
-            <strong>עדכון אחרון:</strong> 9.1.2026
+
+<!-- Zappy Attribution Header -->
+<div id="zappy-attribution-header" class="zappy-header" style="display: none;">
+  <p>Happily created by&nbsp;<a href="https://zappy5.com" target="_blank" rel="noopener noreferrer" class="zappy-link">Zappy</a></p>
+</div>
+    <a href="#main-content" class="skip-link">דלג לתוכן הראשי</a>
+
+    <header role="banner">
+        <div class="header-container">
+            <a href="/" class="logo-link" aria-label="loplarjjjj - חזרה לדף הבית">
+                <img src="/assets/loplarjjjj-logo.webp" alt="loplarjjjj" class="logo">
+            </a>
+            
+            <button class="mobile-menu-toggle" aria-label="תפריט ניווט" aria-expanded="false">
+                ☰
+            </button>
+
+            <nav class="main-nav" role="navigation" aria-label="ניווט ראשי">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="/about" class="nav-link">אודות</a></li>
+                    <li class="nav-item"><a href="/services" class="nav-link">שירותים</a></li>
+                    <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="/privacy" class="nav-link">Privacy</a></li>
+                    <li class="nav-item"><a href="/accessibility" class="nav-link active" aria-current="page">Accessibility</a></li>
+                    <li class="nav-item"><a href="/terms" class="nav-link">Terms</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <p>
-            עזבי עוד פעם מחויבת להנגיש את השירותים לכלל הציבור. אנו פועלים ליישם את הנחיות התקן הישראלי 
-            (ת"י 5568) המבוסס על הנחיות WCAG 2.1 ברמת AA.
-        </p>
-
-        <div class="compliance-level">
-            רמת נגישות: AA (תקן ישראלי ת"י 5568)
+    <section class="hero-section" aria-labelledby="hero-heading">
+        <div class="hero-content">
+            <div class="hero-icon" aria-hidden="true">♿</div>
+            <h1 id="hero-heading">הצהרת נגישות</h1>
         </div>
+    </section>
 
-        <h2>1. מדיניות הנגישות</h2>
-        <p>
-            אנו מאמינים בשוויון זכויות ובזכותו של כל אדם לקבל מידע ושירותים בצורה עצמאית ושוויונית. 
-            אתר זה תוכנן ונבנה תוך מתן דגש מיוחד על נגישות לאנשים עם מוגבלויות.
-        </p>
+    <main id="main-content" role="main">
+        <article class="accessibility-intro">
+            <h2>מדיניות הנגישות</h2>
+            <p>loplarjjjj מחויבת להנגיש את השירותים לכלל הציבור. אנו פועלים ליישם את הנחיות התקן הישראלי (ת"י 5568) המבוסס על הנחיות WCAG 2.1 ברמת AA.</p>
+            <p>אנו מאמינים בשוויון זכויות ובזכותו של כל אדם לקבל מידע ושירותים בצורה עצמאית ושוויונית. אתר זה תוכנן ונבנה תוך מתן דגש מיוחד על נגישות לאנשים עם מוגבלויות.</p>
+        </article>
 
-        <h2>2. הסדרי הנגישות באתר</h2>
-        <ul>
-            <li>תמיכה בניווט באמצעות מקלדת</li>
-            <li>תמיכה בקוראי מסך</li>
-            <li>ניגודיות צבעים מתאימה</li>
-            <li>גדלי פונט גמישים וניתנים להגדלה</li>
-            <li>תיאורי תמונות (Alt text) מפורטים</li>
-            <li>כותרות מובנות היררכית</li>
-            <li>קישורים תיאוריים וברורים</li>
-            <li>תמיכה בזום עד 200% ללא אובדן תוכן</li>
-        </ul>
-
-        <div class="wcag-info">
-            <h3>תאימות לתקן WCAG 2.1</h3>
+        <section class="standards-section" aria-labelledby="standards-heading">
+            <h3 id="standards-heading">התאמה לתקן WCAG 2.1</h3>
             <p>האתר תואם לרמת AA של תקן WCAG 2.1, הכולל:</p>
-            <ul>
-                <li><strong>נתפס (Perceivable):</strong> המידע מוצג בדרכים שמשתמשים יכולים לתפוס</li>
-                <li><strong>פעיל (Operable):</strong> רכיבי הממשק ניתנים להפעלה</li>
-                <li><strong>מובן (Understandable):</strong> המידע וממשק המשתמש מובנים</li>
-                <li><strong>חזק (Robust):</strong> התוכן יכול להיות מפוענח על ידי מגוון טכנולוגיות</li>
-            </ul>
-        </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <p>תמיכה בניווט באמצעות מקלדת</p>
+                </div>
+                <div class="feature-card">
+                    <p>תמיכה בקוראי מסך</p>
+                </div>
+                <div class="feature-card">
+                    <p>ניגודיות צבעים מתאימה</p>
+                </div>
+                <div class="feature-card">
+                    <p>גדלי פונט גמישים וניתנים להגדלה</p>
+                </div>
+                <div class="feature-card">
+                    <p>תיאורי תמונות (Alt text) מפורטים</p>
+                </div>
+                <div class="feature-card">
+                    <p>כותרות מובנות היררכית</p>
+                </div>
+                <div class="feature-card">
+                    <p>קישורים תיאוריים וברורים</p>
+                </div>
+                <div class="feature-card">
+                    <p>תמיכה בזום עד 200% ללא אובדן תוכן</p>
+                </div>
+            </div>
+        </section>
 
-        <h2>3. טכנולוגיות מסייעות נתמכות</h2>
-        <ul>
-            <li>NVDA (Windows)</li>
-            <li>JAWS (Windows)</li>
-            <li>VoiceOver (Mac/iOS)</li>
-            <li>TalkBack (Android)</li>
-            <li>Dragon NaturallySpeaking</li>
-            <li>Switch navigation</li>
-        </ul>
+        <section class="principles-section" aria-labelledby="principles-heading">
+            <h3 id="principles-heading">עקרונות הנגישות</h3>
+            <div class="principles-grid">
+                <div class="principle-card">
+                    <span class="principle-icon" aria-hidden="true">👁️</span>
+                    <h4>נתפס (Perceivable)</h4>
+                    <p>המידע מוצג בדרכים שמשתמשים יכולים לתפוס</p>
+                </div>
+                <div class="principle-card">
+                    <span class="principle-icon" aria-hidden="true">⚙️</span>
+                    <h4>פעיל (Operable)</h4>
+                    <p>רכיבי הממשק ניתנים להפעלה</p>
+                </div>
+                <div class="principle-card">
+                    <span class="principle-icon" aria-hidden="true">💡</span>
+                    <h4>מובן (Understandable)</h4>
+                    <p>המידע וממשק המשתמש מובנים</p>
+                </div>
+                <div class="principle-card">
+                    <span class="principle-icon" aria-hidden="true">💪</span>
+                    <h4>חזק (Robust)</h4>
+                    <p>התוכן יכול להיות מפוענח על ידי מגוון טכנולוגיות</p>
+                </div>
+            </div>
+        </section>
 
-        <h2>4. בדיקות נגישות</h2>
-        <p>האתר נבדק באמצעות:</p>
-        <ul>
-            <li>כלים אוטומטיים לבדיקת נגישות</li>
-            <li>בדיקות ידניות עם קוראי מסך</li>
-            <li>ניווט באמצעות מקלדת בלבד</li>
-            <li>בדיקת ניגודיות צבעים</li>
-            <li>בדיקה עם משתמשים עם מוגבלויות</li>
-        </ul>
+        <section class="tools-section" aria-labelledby="tools-heading">
+            <h3 id="tools-heading">טכנולוגיות מסייעות נתמכות</h3>
+            <div class="tools-list">
+                <div class="tool-item">NVDA (Windows)</div>
+                <div class="tool-item">JAWS (Windows)</div>
+                <div class="tool-item">VoiceOver (Mac/iOS)</div>
+                <div class="tool-item">TalkBack (Android)</div>
+                <div class="tool-item">Dragon NaturallySpeaking</div>
+                <div class="tool-item">Switch navigation</div>
+            </div>
+        </section>
 
-        <h2>5. שיפורים מתמשכים</h2>
-        <p>
-            אנו עובדים באופן מתמשך לשיפור נגישות האתר ומעדכנים אותו בהתאם להתפתחויות טכנולוגיות ולמשוב מהמשתמשים.
-        </p>
+        <section class="tools-section" aria-labelledby="testing-heading" style="margin-top: 2rem;">
+            <h3 id="testing-heading">בדיקות נגישות</h3>
+            <p style="text-align: center; margin-bottom: 2rem; color: var(--text-medium);">אנו עובדים באופן מתמשך לשיפור נגישות האתר ומעדכנים אותו בהתאם להתפתחויות טכנולוגיות ולמשוב מהמשתמשים.</p>
+            <div class="tools-list">
+                <div class="tool-item">כלים אוטומטיים לבדיקת נגישות</div>
+                <div class="tool-item">בדיקות ידניות עם קוראי מסך</div>
+                <div class="tool-item">ניווט באמצעות מקלדת בלבד</div>
+                <div class="tool-item">בדיקת ניגודיות צבעים</div>
+                <div class="tool-item">בדיקה עם משתמשים עם מוגבלויות</div>
+            </div>
+        </section>
 
-        <div class="contact-info">
-            <h2>6. יצירת קשר ומשוב</h2>
+        <section class="contact-section" aria-labelledby="contact-heading">
+            <h3 id="contact-heading">צרו קשר בנושא נגישות</h3>
             <p>אם נתקלתם בבעיית נגישות באתר או זקוקים לסיוע, אנא פנו אלינו:</p>
-            <ul>
-                <li><strong>חברה:</strong> עזבי עוד פעם</li>
-                <li><strong>אימייל:</strong> <a href="mailto:info@company.com">info@company.com</a></li>
-                <li><strong>טלפון:</strong> <a href="tel:03-1234567">03-1234567</a></li>
-            </ul>
-            <p>
-                <strong>זמני מענה:</strong> נענה לפניות בנושא נגישות תוך 3 ימי עסקים ונפעל לפתרון תוך 10 ימי עסקים.
-            </p>
-            <p>
-                <strong>תלונות:</strong> ניתן להגיש תלונה למשרד המשפטים - הנציבות לשוויון זכויות לאנשים עם מוגבלות
-            </p>
-        </div>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="contact-item-icon" aria-hidden="true">🏢</span>
+                    <strong>חברה:</strong>
+                    <span>loplarjjjj</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-item-icon" aria-hidden="true">📧</span>
+                    <strong>אימייל:</strong>
+                    <a href="mailto:info@company.com">info@company.com</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-item-icon" aria-hidden="true">📞</span>
+                    <strong>טלפון:</strong>
+                    <a href="tel:03-1234567">03-1234567</a>
+                </div>
+            </div>
 
+            <div class="response-time">
+                <h4>זמני מענה</h4>
+                <p>נענה לפניות בנושא נגישות תוך 3 ימי עסקים ונפעל לפתרון תוך 10 ימי עסקים.</p>
+            </div>
+        </section>
+
+        <section class="complaints-section" aria-labelledby="complaints-heading">
+            <h4 id="complaints-heading">תלונות</h4>
+            <p>ניתן להגיש תלונה למשרד המשפטים - הנציבות לשוויון זכויות לאנשים עם מוגבלות</p>
+        </section>
+    </main>
+
+    
+    <!-- Legal Footer -->
+    <footer class="legal-footer">
+      <div class="container">
+        <div class="footer-main">
+          <div class="all-rights-reserved">
+            <p>© 2026 עזבי עוד פעם. כל הזכויות שמורות.</p>
+          </div>
+          <div class="footer-social">
+              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-icon social-facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-icon social-instagram">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="social-icon social-whatsapp">
+                <i class="fa-brands fa-whatsapp"></i>
+              </a></div>
+          <div class="footer-legal">
+            <a href="/privacy" aria-label="מדיניות פרטיות">
+              מדיניות פרטיות
+            </a>
+            <span class="separator">|</span>
+            <a href="/accessibility" aria-label="נגישות">
+              נגישות
+            </a>
+            <span class="separator">|</span>
+            <a href="/terms" aria-label="תנאי שימוש">
+              תנאי שימוש
+            </a>
+          </div>
+        </div>
+        <div class="zappy-attribution">
+          <p>נוצר באמצעות&nbsp;<a href="https://zappy5.com" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">Zappy</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mainNav = document.querySelector('.main-nav');
         
-    </div></div>
-    <script src="/script.js"></script>
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', function() {
+                mainNav.classList.toggle('active');
+                const isExpanded = mainNav.classList.contains('active');
+                this.setAttribute('aria-expanded', isExpanded);
+                this.textContent = isExpanded ? '✕' : '☰';
+            });
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.main-nav') && !event.target.closest('.mobile-menu-toggle')) {
+                mainNav.classList.remove('active');
+                if (mobileMenuToggle) {
+                    mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                    mobileMenuToggle.textContent = '☰';
+                }
+            }
+        });
+
+        // Close mobile menu when pressing Escape
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && mainNav.classList.contains('active')) {
+                mainNav.classList.remove('active');
+                if (mobileMenuToggle) {
+                    mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                    mobileMenuToggle.textContent = '☰';
+                    mobileMenuToggle.focus();
+                }
+            }
+        });
+
+        // Smooth scroll for skip link
+        document.querySelector('.skip-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('#main-content').focus();
+            document.querySelector('#main-content').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+
+
+<!-- Zappy Attribution Header Script -->
+<script>
+(function() {
+  var websiteId = '0fa23cf9-d3cf-42ba-9e66-069d7f23ceb8';
+  
+  // Don't show header in preview mode
+  var currentUrl = window.location.href;
+  var isPreview = currentUrl.includes('/preview/') || 
+                  currentUrl.includes('/preview-fullscreen/') || 
+                  currentUrl.includes('localhost:5001') ||
+                  currentUrl.includes('localhost:3000');
+  
+  if (isPreview) {
+    return; // Exit early in preview mode
+  }
+  
+  fetch('https://api.zappy5.com/api/website/' + websiteId + '/tier')
+    .then(function(response) { return response.json(); })
+    .then(function(data) {
+      if (data.showAttribution) {
+        var header = document.getElementById('zappy-attribution-header');
+        if (header) {
+          // Use dynamic announcement content if available
+          if (data.announcement && data.announcement.html) {
+            header.innerHTML = data.announcement.html;
+          }
+          // Apply fixed positioning styles inline (works for existing sites too)
+          header.style.cssText = 'position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; width: 100% !important; z-index: 99999 !important; display: flex !important; justify-content: center !important; align-items: center !important; text-align: center !important; box-sizing: border-box !important;';
+          // Fix child elements that might have position: fixed from old CSS
+          var children = header.querySelectorAll('*');
+          for (var i = 0; i < children.length; i++) {
+            children[i].style.position = 'static';
+          }
+          // Get header height
+          var headerHeight = header.offsetHeight;
+          // Find and fix navbar to be fixed as well (prevents gap at top of page)
+          var navSelectors = ['nav', '.navbar', '.nav'];
+          var navbar = null;
+          for (var j = 0; j < navSelectors.length; j++) {
+            navbar = document.querySelector(navSelectors[j]);
+            if (navbar && navbar.id !== 'zappy-attribution-header') break;
+            navbar = null;
+          }
+          if (navbar) {
+            var navbarHeight = navbar.offsetHeight;
+            navbar.style.cssText += '; position: fixed !important; top: ' + headerHeight + 'px !important; left: 0 !important; right: 0 !important; width: 100% !important; z-index: 99998 !important;';
+            document.body.style.paddingTop = (headerHeight + navbarHeight) + 'px';
+          } else {
+            document.body.style.paddingTop = headerHeight + 'px';
+          }
+        }
+      }
+    })
+    .catch(function(error) {
+      console.error('Failed to check tier:', error);
+    });
+})();
+</script>
+    <div data-integration="accessibility:toolbar"></div>
+
     <script id="zappy-mobile-submenu-script">
     (function() {
       function initMobileSubmenuToggles() {
-        if (window.innerWidth > 768) { document.querySelectorAll('.mobile-submenu-toggle').forEach(function(b){b.remove();}); document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(m){m.classList.remove('mobile-expanded');}); return; }
-        document.querySelectorAll('.nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu)').forEach(function(li) {
+        if (window.innerWidth > 768) {
+          document.querySelectorAll('.mobile-submenu-toggle').forEach(function(btn) { btn.remove(); });
+          document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) { menu.classList.remove('mobile-expanded'); });
+          return;
+        }
+        var items = document.querySelectorAll('.nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu)');
+        items.forEach(function(li) {
           if (li.querySelector('.mobile-submenu-toggle')) return;
-          var sm = li.querySelector('.sub-menu'), pl = li.querySelector(':scope > a') || li.querySelector(':scope > .menu-group-title');
-          if (!sm || !pl) return;
-          var tb = document.createElement('button'); tb.className = 'mobile-submenu-toggle'; tb.setAttribute('aria-label', 'Toggle submenu'); tb.setAttribute('type', 'button');
-          pl.insertAdjacentElement('afterend', tb);
-          tb.addEventListener('click', function(e) { e.preventDefault(); e.stopPropagation();
-            document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(m) { if (m !== sm) { m.classList.remove('mobile-expanded'); var t = m.parentElement.querySelector('.mobile-submenu-toggle'); if(t) t.classList.remove('expanded'); }});
-            sm.classList.toggle('mobile-expanded'); tb.classList.toggle('expanded');
+          var submenu = li.querySelector('.sub-menu');
+          var parentLink = li.querySelector(':scope > a');
+          if (!submenu || !parentLink) return;
+          var toggleBtn = document.createElement('button');
+          toggleBtn.className = 'mobile-submenu-toggle';
+          toggleBtn.setAttribute('aria-label', 'Toggle submenu');
+          toggleBtn.setAttribute('type', 'button');
+          parentLink.insertAdjacentElement('afterend', toggleBtn);
+          toggleBtn.addEventListener('click', function(e) {
+            e.preventDefault(); e.stopPropagation();
+            document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) {
+              if (menu !== submenu) { menu.classList.remove('mobile-expanded'); var t = menu.parentElement.querySelector('.mobile-submenu-toggle'); if(t) t.classList.remove('expanded'); }
+            });
+            submenu.classList.toggle('mobile-expanded');
+            toggleBtn.classList.toggle('expanded');
           });
         });
       }
-      if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initMobileSubmenuToggles); } else { initMobileSubmenuToggles(); }
-      window.addEventListener('resize', function() { clearTimeout(window._mrt); window._mrt = setTimeout(initMobileSubmenuToggles, 250); });
-      var observer = new MutationObserver(function(mutations) { mutations.forEach(function(mutation) { if (mutation.type === 'attributes') { var target = mutation.target; if (target.classList && (target.classList.contains('active') || target.classList.contains('open'))) { setTimeout(initMobileSubmenuToggles, 100); } } }); });
-      setTimeout(function() { document.querySelectorAll('.mobile-menu, .nav-menu, #navMenu, nav').forEach(function(menu) { observer.observe(menu, { attributes: true, attributeFilter: ['class', 'style'] }); }); }, 500);
+      if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initMobileSubmenuToggles); }
+      else { initMobileSubmenuToggles(); }
+      var resizeTimer; window.addEventListener('resize', function() { clearTimeout(resizeTimer); resizeTimer = setTimeout(initMobileSubmenuToggles, 250); });
+      // Re-initialize when mobile menu becomes visible (MutationObserver)
+      var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+          if (mutation.type === 'attributes') {
+            var target = mutation.target;
+            if (target.classList && (target.classList.contains('active') || target.classList.contains('open'))) {
+              setTimeout(initMobileSubmenuToggles, 100);
+            }
+          }
+        });
+      });
+      setTimeout(function() {
+        document.querySelectorAll('.mobile-menu, .nav-menu, #navMenu, nav').forEach(function(menu) {
+          observer.observe(menu, { attributes: true, attributeFilter: ['class', 'style'] });
+        });
+      }, 500);
     })();
     </script>
-</body>
-</html>
+    <script src="/script.js"></script>
+</body></html>

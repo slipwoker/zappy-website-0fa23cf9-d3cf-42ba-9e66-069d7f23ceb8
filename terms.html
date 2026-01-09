@@ -1,13 +1,472 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="he" dir="rtl"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="תנאי שימוש באתר loplarjjjj - מדיניות השימוש, זכויות וחובות המשתמשים, תנאי תשלום והחזרים, קניין רוחני, פרטיות ואבטחת מידע. כל המידע המשפטי והחוקי לשימוש בשירותי הטכנולוגיה ופיתוח האתרים שלנו.">
     <meta name="robots" content="index, follow">
-    <title>תנאי שימוש</title>
-    <meta name="description" content="תנאי השימוש באתר - הזכויות והחובות של המשתמשים">
-    <meta name="keywords" content="">
-    
+    <title>Terms</title>
+    <style>
+        :root {
+            --primary-color: #00CED1;
+            --bg-light: #F2F2F2;
+            --text-dark: #333333;
+            --text-medium: #4A4A4A;
+            --text-light: #777777;
+            --accent-light: #F0F8FF;
+            --white: #FFFFFF;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 8px 30px rgba(0, 206, 209, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background-color: var(--white);
+            direction: rtl;
+        }
+
+        /* Skip to content link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 0 0 4px 4px;
+            z-index: 100;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo {
+            height: 50px;
+            width: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .main-nav {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color);
+            background-color: var(--accent-light);
+        }
+
+        .nav-link.active {
+            color: var(--primary-color);
+            background-color: var(--accent-light);
+            font-weight: 600;
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 50%;
+            transform: translateX(50%);
+            width: 30px;
+            height: 3px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: var(--text-dark);
+            cursor: pointer;
+            padding: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .mobile-menu-toggle:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #008B8B 100%);
+            color: var(--white);
+            padding: 100px 2rem 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" fill="rgba(255,255,255,0.05)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 2rem;
+        }
+
+        .terms-container {
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            padding: 60px;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        .terms-intro {
+            background: var(--accent-light);
+            border-right: 4px solid var(--primary-color);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 3rem;
+        }
+
+        .terms-intro h2 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .terms-intro p {
+            color: var(--text-medium);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .terms-section {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--bg-light);
+        }
+
+        .terms-section:last-child {
+            border-bottom: none;
+        }
+
+        .terms-section h3 {
+            color: var(--text-dark);
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .terms-section h3::before {
+            content: '';
+            width: 6px;
+            height: 30px;
+            background: var(--primary-color);
+            border-radius: 3px;
+        }
+
+        .terms-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .terms-list li {
+            background: var(--bg-light);
+            padding: 1.2rem 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            position: relative;
+            padding-right: 3rem;
+            transition: all 0.3s ease;
+            color: var(--text-medium);
+            line-height: 1.7;
+        }
+
+        .terms-list li:hover {
+            background: var(--accent-light);
+            transform: translateX(-5px);
+            box-shadow: 0 4px 12px rgba(0, 206, 209, 0.15);
+        }
+
+        .terms-list li::before {
+            content: '✓';
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .contact-card {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #008B8B 100%);
+            color: var(--white);
+            padding: 3rem;
+            border-radius: 16px;
+            margin-top: 3rem;
+            text-align: center;
+            box-shadow: var(--shadow-hover);
+        }
+
+        .contact-card h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-card h3::before {
+            display: none;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 1.5rem;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-5px);
+        }
+
+        .contact-item strong {
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item a {
+            color: var(--white);
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            opacity: 0.8;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 3rem 2rem 1.5rem;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-content p {
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .main-nav {
+                position: absolute;
+                top: 100%;
+                right: 0;
+                width: 100%;
+                background: var(--white);
+                box-shadow: var(--shadow);
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+            }
+
+            .main-nav.active {
+                max-height: 500px;
+            }
+
+            .nav-menu {
+                flex-direction: column;
+                padding: 1rem 0;
+                gap: 0;
+            }
+
+            .nav-item {
+                width: 100%;
+            }
+
+            .nav-link {
+                display: block;
+                padding: 1rem 2rem;
+                border-radius: 0;
+            }
+
+            .hero-section {
+                padding: 60px 1.5rem 50px;
+            }
+
+            .hero-section h1 {
+                font-size: 2.2rem;
+            }
+
+            .terms-container {
+                padding: 2rem 1.5rem;
+            }
+
+            .terms-intro {
+                padding: 1.5rem;
+            }
+
+            .terms-section h3 {
+                font-size: 1.3rem;
+            }
+
+            .terms-list li {
+                padding: 1rem 1rem 1rem 2.5rem;
+                font-size: 0.95rem;
+            }
+
+            .contact-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-section h1 {
+                font-size: 1.8rem;
+            }
+
+            .header-container {
+                padding: 1rem;
+            }
+
+            .logo {
+                height: 40px;
+            }
+        }
+
+        /* Focus styles for accessibility */
+        *:focus {
+            outline: 3px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+
+        /* Print styles */
+        @media print {
+            header, footer, .mobile-menu-toggle {
+                display: none;
+            }
+
+            .terms-container {
+                box-shadow: none;
+            }
+        }
+    </style>
+
     <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
@@ -16,7 +475,59 @@
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png">
     <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-    <!-- Zappy Analytics -->
+<style>
+/* Zappy Attribution Header Styles */
+.zappy-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0px 4px 19px 0px rgba(0,0,0,0.04);
+  padding: 16px 10px;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  color: #4a4a4a;
+  line-height: 21px;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 21px;
+  direction: ltr !important;
+  unicode-bidi: isolate;
+}
+
+    .zappy-header p {
+      margin: 0;
+      padding: 0;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21px;
+      white-space: nowrap;
+      display: inline-block;
+      vertical-align: baseline;
+      margin-bottom: 0 !important;
+      direction: ltr !important;
+    }
+
+.zappy-header .zappy-link {
+  font-weight: 700;
+  color: #4a4a4a;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.zappy-header .zappy-link:hover {
+  opacity: 0.7;
+}</style>
+    <!-- Cookie Consent -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
+    <!-- Mickidum Accessibility Toolbar -->
+    <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
+<!-- Zappy Analytics -->
 <script>
 (function() {
   'use strict';
@@ -219,7 +730,7 @@
 </script>
 <!-- End Zappy Analytics -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/styles.css">
+
     <style id="zappy-dropdown-submenu-styles">
       /* ========== DESKTOP DROPDOWN SUBMENU STYLES ========== */
       /* Base styles for dropdown submenus - parent must be positioned */
@@ -260,137 +771,356 @@
       }
       @media (min-width: 769px) { .mobile-submenu-toggle { display: none !important; } }
     </style>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-<div class="legal-page-wrapper"><div class="legal-container">
-        <h1>תנאי שימוש</h1>
-        
-        <div class="last-updated">
-            <strong>עדכון אחרון:</strong> 9.1.2026
+
+<!-- Zappy Attribution Header -->
+<div id="zappy-attribution-header" class="zappy-header" style="display: none;">
+  <p>Happily created by&nbsp;<a href="https://zappy5.com" target="_blank" rel="noopener noreferrer" class="zappy-link">Zappy</a></p>
+</div>
+    <a href="#main-content" class="skip-link">דלג לתוכן הראשי</a>
+
+    <header role="banner">
+        <div class="header-container">
+            <a href="/" class="logo-link" aria-label="חזרה לדף הבית">
+                <img src="/assets/loplarjjjj-logo.webp" alt="loplarjjjj" class="logo">
+            </a>
+            
+            <nav class="main-nav" role="navigation" aria-label="תפריט ראשי">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="/about" class="nav-link">אודות</a></li>
+                    <li class="nav-item"><a href="/services" class="nav-link">שירותים</a></li>
+                    <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="/privacy" class="nav-link">Privacy</a></li>
+                    <li class="nav-item"><a href="/accessibility" class="nav-link">Accessibility</a></li>
+                    <li class="nav-item"><a href="/terms" class="nav-link active">Terms</a></li>
+                </ul>
+            </nav>
+
+            <button class="mobile-menu-toggle" aria-label="תפריט" aria-expanded="false">
+                ☰
+            </button>
         </div>
+    </header>
 
-        <div class="important-notice">
-            השימוש באתר זה מהווה הסכמה לתנאי השימוש המפורטים להלן. אנא קראו בעיון לפני השימוש.
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>תנאי שימוש</h1>
         </div>
+    </section>
 
-        <h2>1. הגדרות</h2>
-        <ul>
-            <li><strong>"החברה"</strong> - עזבי עוד פעם</li>
-            <li><strong>"המשתמש"</strong> - כל מי שגולש או משתמש באתר</li>
-            <li><strong>"השירותים"</strong> - General הניתנים דרך האתר</li>
-        </ul>
+    <main id="main-content" role="main">
+        <div class="terms-container">
+            <div class="terms-intro">
+                <h2>1. הגדרות</h2>
+                <p>loplarjjjj מספקת טכנולוגיה / פיתוח אתרים דרך האתר. השירותים כפופים לתנאים המפורטים במסמך זה ועשויים להשתנות מעת לעת.</p>
+            </div>
 
-        <h2>2. תיאור השירותים</h2>
-        <p>
-            עזבי עוד פעם מספקת General דרך האתר. השירותים כפופים לתנאים המפורטים במסמך זה 
-            ועשויים להשתנות מעת לעת.
-        </p>
+            <div class="terms-section">
+                <h3>תנאים כלליים</h3>
+                <p style="color: var(--text-medium); font-size: 1.05rem; margin-bottom: 1.5rem;">השימוש באתר מותנה בעמידה בתנאים הבאים:</p>
+                <ul class="terms-list">
+                    <li>"החברה"- loplarjjjj</li>
+                    <li>"המשתמש"- כל מי שגולש או משתמש באתר</li>
+                    <li>"השירותים"- טכנולוגיה / פיתוח אתרים הניתנים דרך האתר</li>
+                    <li>השימוש באתר למטרות חוקיות בלבד</li>
+                    <li>אי-הפרעה לפעילות האתר או משתמשים אחרים</li>
+                    <li>אי-העלאת תוכן פוגעני, לא חוקי או מזיק</li>
+                    <li>כיבוד זכויות יוצרים וקניין רוחני</li>
+                    <li>אי-ביצוע פעולות שעלולות לפגוע באבטחת האתר</li>
+                </ul>
+            </div>
 
-        <h2>3. תנאי השימוש</h2>
-        <p>השימוש באתר מותנה בעמידה בתנאים הבאים:</p>
-        <ul>
-            <li>השימוש באתר למטרות חוקיות בלבד</li>
-            <li>אי-הפרעה לפעילות האתר או משתמשים אחרים</li>
-            <li>אי-העלאת תוכן פוגעני, לא חוקי או מזיק</li>
-            <li>כיבוד זכויות יוצרים וקניין רוחני</li>
-            <li>אי-ביצוע פעולות שעלולות לפגוע באבטחת האתר</li>
-        </ul>
+            <div class="terms-section">
+                <h3>חובות המשתמש</h3>
+                <ul class="terms-list">
+                    <li>מתן מידע נכון ומדויק בעת הרשמה או הזמנה</li>
+                    <li>שמירה על סודיות פרטי הגישה לחשבון</li>
+                    <li>הודעה מיידית על כל שימוש לא מורשה בחשבון</li>
+                    <li>עדכון מידע אישי במידת הצורך</li>
+                </ul>
+            </div>
 
-        <h2>4. חובות המשתמש</h2>
-        <ul>
-            <li>מתן מידע נכון ומדויק בעת הרשמה או הזמנה</li>
-            <li>שמירה על סודיות פרטי הגישה לחשבון</li>
-            <li>הודעה מיידית על כל שימוש לא מורשה בחשבון</li>
-            <li>עדכון מידע אישי במידת הצורך</li>
-        </ul>
+            <div class="terms-section">
+                <h3>תשלומים והחזרים</h3>
+                <p style="color: var(--text-medium); font-size: 1.05rem; margin-bottom: 1.5rem;">במידה והשירותים כוללים תשלום:</p>
+                <ul class="terms-list">
+                    <li>התשלומים מבוצעים דרך מערכות בטוחות ומוצפנות</li>
+                    <li>המחירים כוללים מע"ם כנדרש בחוק</li>
+                    <li>זכות ביטול עסקה תעמוד בהתאם לחוק הגנת הצרכן</li>
+                    <li>החזרים יבוצעו תוך 14 ימי עסקים מאישור הביטול</li>
+                </ul>
+            </div>
 
-        <h2>5. מדיניות תשלומים והחזרים</h2>
-        <p>במידה והשירותים כוללים תשלום:</p>
-        <ul>
-            <li>התשלומים מבוצעים דרך מערכות בטוחות ומוצפנות</li>
-            <li>המחירים כוללים מע"ם כנדרש בחוק</li>
-            <li>זכות ביטול עסקה תעמוד בהתאם לחוק הגנת הצרכן</li>
-            <li>החזרים יבוצעו תוך 14 ימי עסקים מאישור הביטול</li>
-        </ul>
+            <div class="terms-section">
+                <h3>אחריות והגבלת אחריות</h3>
+                <p style="color: var(--text-medium); font-size: 1.05rem; line-height: 1.8;">השירותים ניתנים "כפי שהם" ללא אחריות מכל סוג. החברה לא תהיה אחראית לנזקים עקיפים, תוצאתיים או מיוחדים הנובעים משימוש באתר, למעט במקרים בהם החוק קובע אחרת.</p>
+            </div>
 
-        <h2>6. הגבלת אחריות</h2>
-        <p>
-            השירותים ניתנים "כפי שהם" ללא אחריות מכל סוג. החברה לא תהיה אחראית לנזקים עקיפים, 
-            תוצאתיים או מיוחדים הנובעים משימוש באתר, למעט במקרים בהם החוק קובע אחרת.
-        </p>
+            <div class="terms-section">
+                <h3>קניין רוחני וזכויות יוצרים</h3>
+                <p style="color: var(--text-medium); font-size: 1.05rem; line-height: 1.8;">כל התכנים באתר, כולל טקסטים, תמונות, עיצוב וקוד, מוגנים בזכויות יוצרים השייכות לloplarjjjj. אסור לשכפל, להפיץ או לעשות שימוש מסחרי בתכנים ללא אישור בכתב.</p>
+            </div>
 
-        <h2>7. זכויות יוצרים וקניין רוחני</h2>
-        <p>
-            כל התכנים באתר, כולל טקסטים, תמונות, עיצוב וקוד, מוגנים בזכויות יוצרים השייכות לעזבי עוד פעם. 
-            אסור לשכפל, להפיץ או לעשות שימוש מסחרי בתכנים ללא אישור בכתב.
-        </p>
+            <div class="terms-section">
+                <h3>פרטיות ואבטחת מידע</h3>
+                <p style="color: var(--text-medium); font-size: 1.05rem; line-height: 1.8;">איסוף ושימוש במידע אישי כפופים למדיניות הפרטיות שלנו. השימוש באתר מהווה הסכמה למדיניות הפרטיות כפי שמפורט בנפרד.</p>
+            </div>
 
-        <h2>8. פרטיות</h2>
-        <p>
-            איסוף ושימוש במידע אישי כפופים למדיניות הפרטיות שלנו. השימוש באתר מהווה הסכמה 
-            למדיניות הפרטיות כפי שמפורט בנפרד.
-        </p>
+            <div class="terms-section">
+                <h3>שינויים בתנאי השימוש</h3>
+                <p style="color: var(--text-medium); font-size: 1.05rem; line-height: 1.8;">החברה רשאית לשנות תנאי שימוש אלה בכל עת. שינויים מהותיים יפורסמו באתר עם הודעה מוקדמת של 30 יום. המשך השימוש לאחר השינוי מהווה הסכמה לתנאים החדשים.</p>
+            </div>
 
-        <h2>9. שינוי תנאי השימוש</h2>
-        <p>
-            החברה רשאית לשנות תנאי שימוש אלה בכל עת. שינויים מהותיים יפורסמו באתר עם הודעה מוקדמת 
-            של 30 יום. המשך השימוש לאחר השינוי מהווה הסכמה לתנאים החדשים.
-        </p>
+            <div class="terms-section">
+                <h3>סיום השירות</h3>
+                <p style="color: var(--text-medium); font-size: 1.05rem; line-height: 1.8;">החברה רשאית להפסיק או להגביל את השירות בכל עת, לרבות במקרה של הפרת תנאי השימוש. במקרה של סיום השירות, יישמרו הוראות הסעיפים הרלוונטיים.</p>
+            </div>
 
-        <h2>10. סיום השירות</h2>
-        <p>
-            החברה רשאית להפסיק או להגביל את השירות בכל עת, לרבות במקרה של הפרת תנאי השימוש. 
-            במקרה של סיום השירות, יישמרו הוראות הסעיפים הרלוונטיים.
-        </p>
+            <div class="terms-section">
+                <h3>דין וסמכות שיפוט</h3>
+                <p style="color: var(--text-medium); font-size: 1.05rem; line-height: 1.8;">תנאי שימוש אלה כפופים לחוקי מדינת ישראל. כל סכסוך יידון בבתי המשפט המוסמכים בישראל, תוך מתן עדיפות לבוררות או גישור במידת האפשר.</p>
+            </div>
 
-        <h2>11. דין חל ויישוב סכסוכים</h2>
-        <p>
-            תנאי שימוש אלה כפופים לחוקי מדינת ישראל. כל סכסוך יידון בבתי המשפט המוסמכים בישראל, 
-            תוך מתן עדיפות לבוררות או גישור במידת האפשר.
-        </p>
+            <div class="terms-section">
+                <h3>הוראות נוספות</h3>
+                <ul class="terms-list">
+                    <li>אם חלק מהתנאים יוכרז כבלתי תקף, יישארו שאר התנאים בתוקף</li>
+                    <li>אי-אכיפה של זכות לא תחשב כוויתור עליה</li>
+                    <li>תנאי השימוש מהווים את מלוא ההסכם בין הצדדים</li>
+                </ul>
+            </div>
 
-        <h2>12. הוראות כלליות</h2>
-        <ul>
-            <li>אם חלק מהתנאים יוכרז כבלתי תקף, יישארו שאר התנאים בתוקף</li>
-            <li>אי-אכיפה של זכות לא תחשב כוויתור עליה</li>
-            <li>תנאי השימוש מהווים את מלוא ההסכם בין הצדדים</li>
-        </ul>
-
-        <div class="contact-info">
-            <h2>13. פרטי יצירת קשר</h2>
-            <p>לשאלות או הבהרות בנוגע לתנאי השימוש:</p>
-            <ul>
-                <li><strong>חברה:</strong> עזבי עוד פעם</li>
-                <li><strong>אימייל:</strong> <a href="mailto:info@company.com">info@company.com</a></li>
-                <li><strong>טלפון:</strong> <a href="tel:03-1234567">03-1234567</a></li>
-                <li><strong>כתובת:</strong> כתובת החברה, ישראל</li>
-            </ul>
+            <div class="contact-card">
+                <h3>לשאלות או הבהרות בנוגע לתנאי השימוש:</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <strong>חברה:</strong>
+                        <span>loplarjjjj</span>
+                    </div>
+                    <div class="contact-item">
+                        <strong>אימייל:</strong>
+                        <a href="mailto:info@company.com">info@company.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>טלפון:</strong>
+                        <a href="tel:03-1234567">03-1234567</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>כתובת:</strong>
+                        <span>כתובת החברה, ישראל</span>
+                    </div>
+                </div>
+            </div>
         </div>
+    </main>
 
-        
-    </div></div>
-    <script src="/script.js"></script>
+    
+    <!-- Legal Footer -->
+    <footer class="legal-footer">
+      <div class="container">
+        <div class="footer-main">
+          <div class="all-rights-reserved">
+            <p>© 2026 עזבי עוד פעם. כל הזכויות שמורות.</p>
+          </div>
+          <div class="footer-social">
+              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-icon social-facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-icon social-instagram">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="social-icon social-whatsapp">
+                <i class="fa-brands fa-whatsapp"></i>
+              </a></div>
+          <div class="footer-legal">
+            <a href="/privacy" aria-label="מדיניות פרטיות">
+              מדיניות פרטיות
+            </a>
+            <span class="separator">|</span>
+            <a href="/accessibility" aria-label="נגישות">
+              נגישות
+            </a>
+            <span class="separator">|</span>
+            <a href="/terms" aria-label="תנאי שימוש">
+              תנאי שימוש
+            </a>
+          </div>
+        </div>
+        <div class="zappy-attribution">
+          <p>נוצר באמצעות&nbsp;<a href="https://zappy5.com" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">Zappy</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mainNav = document.querySelector('.main-nav');
+
+        mobileMenuToggle.addEventListener('click', function() {
+            mainNav.classList.toggle('active');
+            const isExpanded = mainNav.classList.contains('active');
+            this.setAttribute('aria-expanded', isExpanded);
+            this.textContent = isExpanded ? '✕' : '☰';
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('header')) {
+                mainNav.classList.remove('active');
+                mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                mobileMenuToggle.textContent = '☰';
+            }
+        });
+
+        // Close mobile menu on window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                mainNav.classList.remove('active');
+                mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                mobileMenuToggle.textContent = '☰';
+            }
+        });
+
+        // Smooth scroll for skip link
+        document.querySelector('.skip-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('#main-content').focus();
+            document.querySelector('#main-content').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Add scroll animation to terms list items
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.6s ease forwards';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.terms-section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+
+
+<!-- Zappy Attribution Header Script -->
+<script>
+(function() {
+  var websiteId = '0fa23cf9-d3cf-42ba-9e66-069d7f23ceb8';
+  
+  // Don't show header in preview mode
+  var currentUrl = window.location.href;
+  var isPreview = currentUrl.includes('/preview/') || 
+                  currentUrl.includes('/preview-fullscreen/') || 
+                  currentUrl.includes('localhost:5001') ||
+                  currentUrl.includes('localhost:3000');
+  
+  if (isPreview) {
+    return; // Exit early in preview mode
+  }
+  
+  fetch('https://api.zappy5.com/api/website/' + websiteId + '/tier')
+    .then(function(response) { return response.json(); })
+    .then(function(data) {
+      if (data.showAttribution) {
+        var header = document.getElementById('zappy-attribution-header');
+        if (header) {
+          // Use dynamic announcement content if available
+          if (data.announcement && data.announcement.html) {
+            header.innerHTML = data.announcement.html;
+          }
+          // Apply fixed positioning styles inline (works for existing sites too)
+          header.style.cssText = 'position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; width: 100% !important; z-index: 99999 !important; display: flex !important; justify-content: center !important; align-items: center !important; text-align: center !important; box-sizing: border-box !important;';
+          // Fix child elements that might have position: fixed from old CSS
+          var children = header.querySelectorAll('*');
+          for (var i = 0; i < children.length; i++) {
+            children[i].style.position = 'static';
+          }
+          // Get header height
+          var headerHeight = header.offsetHeight;
+          // Find and fix navbar to be fixed as well (prevents gap at top of page)
+          var navSelectors = ['nav', '.navbar', '.nav'];
+          var navbar = null;
+          for (var j = 0; j < navSelectors.length; j++) {
+            navbar = document.querySelector(navSelectors[j]);
+            if (navbar && navbar.id !== 'zappy-attribution-header') break;
+            navbar = null;
+          }
+          if (navbar) {
+            var navbarHeight = navbar.offsetHeight;
+            navbar.style.cssText += '; position: fixed !important; top: ' + headerHeight + 'px !important; left: 0 !important; right: 0 !important; width: 100% !important; z-index: 99998 !important;';
+            document.body.style.paddingTop = (headerHeight + navbarHeight) + 'px';
+          } else {
+            document.body.style.paddingTop = headerHeight + 'px';
+          }
+        }
+      }
+    })
+    .catch(function(error) {
+      console.error('Failed to check tier:', error);
+    });
+})();
+</script>
+    <div data-integration="accessibility:toolbar"></div>
+
     <script id="zappy-mobile-submenu-script">
     (function() {
       function initMobileSubmenuToggles() {
-        if (window.innerWidth > 768) { document.querySelectorAll('.mobile-submenu-toggle').forEach(function(b){b.remove();}); document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(m){m.classList.remove('mobile-expanded');}); return; }
-        document.querySelectorAll('.nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu)').forEach(function(li) {
+        if (window.innerWidth > 768) {
+          document.querySelectorAll('.mobile-submenu-toggle').forEach(function(btn) { btn.remove(); });
+          document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) { menu.classList.remove('mobile-expanded'); });
+          return;
+        }
+        var items = document.querySelectorAll('.nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu)');
+        items.forEach(function(li) {
           if (li.querySelector('.mobile-submenu-toggle')) return;
-          var sm = li.querySelector('.sub-menu'), pl = li.querySelector(':scope > a') || li.querySelector(':scope > .menu-group-title');
-          if (!sm || !pl) return;
-          var tb = document.createElement('button'); tb.className = 'mobile-submenu-toggle'; tb.setAttribute('aria-label', 'Toggle submenu'); tb.setAttribute('type', 'button');
-          pl.insertAdjacentElement('afterend', tb);
-          tb.addEventListener('click', function(e) { e.preventDefault(); e.stopPropagation();
-            document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(m) { if (m !== sm) { m.classList.remove('mobile-expanded'); var t = m.parentElement.querySelector('.mobile-submenu-toggle'); if(t) t.classList.remove('expanded'); }});
-            sm.classList.toggle('mobile-expanded'); tb.classList.toggle('expanded');
+          var submenu = li.querySelector('.sub-menu');
+          var parentLink = li.querySelector(':scope > a');
+          if (!submenu || !parentLink) return;
+          var toggleBtn = document.createElement('button');
+          toggleBtn.className = 'mobile-submenu-toggle';
+          toggleBtn.setAttribute('aria-label', 'Toggle submenu');
+          toggleBtn.setAttribute('type', 'button');
+          parentLink.insertAdjacentElement('afterend', toggleBtn);
+          toggleBtn.addEventListener('click', function(e) {
+            e.preventDefault(); e.stopPropagation();
+            document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) {
+              if (menu !== submenu) { menu.classList.remove('mobile-expanded'); var t = menu.parentElement.querySelector('.mobile-submenu-toggle'); if(t) t.classList.remove('expanded'); }
+            });
+            submenu.classList.toggle('mobile-expanded');
+            toggleBtn.classList.toggle('expanded');
           });
         });
       }
-      if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initMobileSubmenuToggles); } else { initMobileSubmenuToggles(); }
-      window.addEventListener('resize', function() { clearTimeout(window._mrt); window._mrt = setTimeout(initMobileSubmenuToggles, 250); });
-      var observer = new MutationObserver(function(mutations) { mutations.forEach(function(mutation) { if (mutation.type === 'attributes') { var target = mutation.target; if (target.classList && (target.classList.contains('active') || target.classList.contains('open'))) { setTimeout(initMobileSubmenuToggles, 100); } } }); });
-      setTimeout(function() { document.querySelectorAll('.mobile-menu, .nav-menu, #navMenu, nav').forEach(function(menu) { observer.observe(menu, { attributes: true, attributeFilter: ['class', 'style'] }); }); }, 500);
+      if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initMobileSubmenuToggles); }
+      else { initMobileSubmenuToggles(); }
+      var resizeTimer; window.addEventListener('resize', function() { clearTimeout(resizeTimer); resizeTimer = setTimeout(initMobileSubmenuToggles, 250); });
+      // Re-initialize when mobile menu becomes visible (MutationObserver)
+      var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+          if (mutation.type === 'attributes') {
+            var target = mutation.target;
+            if (target.classList && (target.classList.contains('active') || target.classList.contains('open'))) {
+              setTimeout(initMobileSubmenuToggles, 100);
+            }
+          }
+        });
+      });
+      setTimeout(function() {
+        document.querySelectorAll('.mobile-menu, .nav-menu, #navMenu, nav').forEach(function(menu) {
+          observer.observe(menu, { attributes: true, attributeFilter: ['class', 'style'] });
+        });
+      }, 500);
     })();
     </script>
-</body>
-</html>
+    <script src="/script.js"></script>
+</body></html>

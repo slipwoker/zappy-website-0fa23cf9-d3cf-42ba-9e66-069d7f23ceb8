@@ -1,55 +1,65 @@
-# Business — Generative Engine Optimization Map
+# עזבי עוד פעם — Generative Engine Optimization Map
+
+> A General business.
 
 ---
 
 ## Pages
 
 ### אודות
-https://azvi-od-paam.zappy5.app/about
+https://zappy-site-0fa23cf9-d3cf-42ba-9e66.onrender.com/about
 דף אודות loplarjjjj - הסיפור שלנו, המשימה והחזון שלנו בבניית אתרים באמצעות בינה מלאכותית. למידה על הערכים, הטכנולוגיה והצוות שמאחורי המהפכה בבניית אתרים.
 
 ### שירותים
-https://azvi-od-paam.zappy5.app/services
+https://zappy-site-0fa23cf9-d3cf-42ba-9e66.onrender.com/services
 דף שירותים מקיף המציג את פתרונות בניית האתרים בבינה מלאכותית של loplarjjjj - כולל שירותים לסטארטאפים טכנולוגיים, פתרונות איקומרס חכמים, כלי הוראה אינטראקטיביים, אתרי תיק עבודות, דפי נחיתה ועוד. בניית אתרים ללא ידע טכני עם AI website builder ישראל.
 
 ### Contact
-https://azvi-od-paam.zappy5.app/contact
+https://zappy-site-0fa23cf9-d3cf-42ba-9e66.onrender.com/contact
 צור קשר עם loplarjjjj - אנחנו כאן לענות על כל שאלה ולעזור לכם להתחיל. תמיכה 24/7, שאלות נפוצות ופרטי התקשרות מלאים.
 
 ### Privacy
-https://azvi-od-paam.zappy5.app/privacy
+https://zappy-site-0fa23cf9-d3cf-42ba-9e66.onrender.com/privacy
 מדיניות פרטיות של loplarjjjj - מידע על איסוף, שימוש והגנה על המידע האישי שלכם בהתאם לחוק הגנת הפרטיות התשמ"א-1981. הזכויות שלכם, שימוש בעוגיות, אבטחת מידע ופרטי יצירת קשר.
 
 ### Accessibility
-https://azvi-od-paam.zappy5.app/accessibility
+https://zappy-site-0fa23cf9-d3cf-42ba-9e66.onrender.com/accessibility
 הצהרת נגישות של loplarjjjj - מחויבות לנגישות דיגיטלית לכלל הציבור בהתאם לתקן ישראלי 5568 ו-WCAG 2.1 ברמת AA. מידע על תמיכה בטכנולוגיות מסייעות, עקרונות נגישות ודרכי יצירת קשר.
 
 ### Terms
-https://azvi-od-paam.zappy5.app/terms
+https://zappy-site-0fa23cf9-d3cf-42ba-9e66.onrender.com/terms
 תנאי שימוש באתר loplarjjjj - מדיניות השימוש, זכויות וחובות המשתמשים, תנאי תשלום והחזרים, קניין רוחני, פרטיות ואבטחת מידע. כל המידע המשפטי והחוקי לשימוש בשירותי הטכנולוגיה ופיתוח האתרים שלנו.
 
 ## Legal & Policy
 
 ### Privacy Policy
-https://azvi-od-paam.zappy5.app/privacy
+https://zappy-site-0fa23cf9-d3cf-42ba-9e66.onrender.com/privacy
 Information about how user data is collected, stored, and protected.
 
 ### Terms & Conditions
-https://azvi-od-paam.zappy5.app/terms
+https://zappy-site-0fa23cf9-d3cf-42ba-9e66.onrender.com/terms
 Legal terms describing service usage, rights, and policies.
 
 ### Accessibility Statement
-https://azvi-od-paam.zappy5.app/accessibility
+https://zappy-site-0fa23cf9-d3cf-42ba-9e66.onrender.com/accessibility
 Information about WCAG compliance and accessibility features.
 
 ---
 
 # Business Context (for LLM understanding)
 
-## About Business
+## About עזבי עוד פעם
+עזבי עוד פעם is a business in the General industry.
+
+## Target Audience
+General audience
+
+## Industry
+General
+
 ---
 
 # Additional Resources
 
-- **Sitemap**: https://azvi-od-paam.zappy5.app/sitemap.xml
-- **Robots.txt**: https://azvi-od-paam.zappy5.app/robots.txt
+- **Sitemap**: https://zappy-site-0fa23cf9-d3cf-42ba-9e66.onrender.com/sitemap.xml
+- **Robots.txt**: https://zappy-site-0fa23cf9-d3cf-42ba-9e66.onrender.com/robots.txt

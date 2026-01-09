@@ -1,6 +1,4 @@
-# עזבי עוד פעם — Generative Engine Optimization Map
-
-> A General business.
+# Business — Generative Engine Optimization Map
 
 ---
 
@@ -48,15 +46,7 @@ Information about WCAG compliance and accessibility features.
 
 # Business Context (for LLM understanding)
 
-## About עזבי עוד פעם
-עזבי עוד פעם is a business in the General industry.
-
-## Target Audience
-General audience
-
-## Industry
-General
-
+## About Business
 ---
 
 # Additional Resources
